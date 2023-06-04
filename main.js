@@ -1,23 +1,15 @@
-const card1 = document.getElementById("card-1")
-const card2 = document.getElementById("card-2")
-const card3 = document.getElementById("card-3")
+const downloadFile = () => {
+  const downloadInstance = document.createElement("a")
+  downloadInstance.href = "./assets/Miguel-Jesus-Oyola.pdf"
+  downloadInstance.target = "_blank"
+  downloadInstance.download = "Jesus Oyola"
 
-const loadCard = (entradas, observador) => {
-  /* console.log(entradas);
-  console.log(observador); */
-
-  entradas.forEach((element) => {
-    if (element.isIntersecting)
-      element.target.classList.add("visible")
-  })
+  document.body.appendChild(downloadInstance)
+  downloadInstance.click()
+  document.body.removeChild(downloadInstance)
 }
 
-const observador = new IntersectionObserver(loadCard, {
-  root: null,
-  rootMargin: " 0px 0px 0px 0px",
-  threshold: 1.0,
-})
-
-observador.observe(card1)
-observador.observe(card2)
-observador.observe(card3)
+const submitFormulario = ()=>{
+  const form = document.getElementById('formulario');
+  form.onsubmit();
+}
