@@ -4,8 +4,32 @@
   box-sizing: border-box;
 }
 
-body {
-  background-color: #222 !important;
+/* Bootstrap 5 Breakpoints
+// Small
+sm: 576px;
+// Medium
+md: 768px;
+// Large
+lg: 992px;
+// Extra large
+xl: 1200px;
+// Extra extra large
+xxl: 1400px;
+// Custom Breakpoints
+// X-Small
+extra-small: 360px; */
+
+   body {
+  /* background-color: #222 !important; */
+  background: radial-gradient(circle, rgba(114,53,189,1) 0%, rgba(83,47,99,1) 96%);
+}    
+#particles-js{
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: -1;
+  background: radial-gradient(circle, rgba(114,53,189,1) 0%, rgba(83,47,99,1) 96%);
+  top: 0;
 }
 .profile-image {
   border-radius: 50%;
@@ -28,71 +52,144 @@ body {
   transform: scale(1);
 }
 
-.qr-code{
+.qr-code {
   width: 8rem;
   height: 8rem;
 }
 
-.img-project-container{
+.img-project-container {
   width: 25rem;
   height: 23rem;
   border-radius: 10px;
 }
 
-.img-project-container img{
+.img-project-container img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
 
-.project-section{
+.project-section {
+  display: flex;
+  flex-direction: column;
   margin-top: 10rem !important;
 }
 
-.sobremi-text{
+.sobremi-text {
   font-size: 2rem;
 }
 
-.title{
+.title {
   font-size: 4rem;
 }
-.subtitle{
+.subtitle {
   font-size: 2.5rem;
 }
 
-.nav-link{
+.nav-link {
   font-size: 1.5rem;
 }
 
-.header-container{
+.header-container {
   position: fixed;
   width: 100%;
   top: 0;
-  background-color:#222;
+  background-color: #222;
 }
-.sobremi-container{
+.sobremi-container {
+  display: flex;
+  flex-direction: row;
   margin-top: 15rem;
+  padding: 2rem;
 }
 
-.form-container{
+
+.form-container {
   background-color: rgb(51, 51, 51, 0.602);
   border-radius: 15px;
-  height: 35rem;
+  height: 40rem;
+  width: 50%;
 }
-.social-media{
+.social-media {
   height: 2rem;
 }
-.social-container{
+.social-container {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-
 }
 
-.footer-container{
+.footer-container {
   margin-top: 7rem;
 }
 
-img{
+img {
   object-fit: cover;
+}
+
+.image-profile-container {
+  margin-top: 5rem;
+}
+input {
+  width: 90% !important;
+  margin-left: 5% !important;
+}
+textarea {
+  width: 90% !important;
+  margin-left: 5% !important;
+}
+
+.send-button {
+  background-color: #04bd7d !important ;
+  width: 25%;
+}
+.download-button {
+  background-color: #04bd7d !important ;
+}
+.bi-send-fill {
+  margin-left: 0.5rem !important;
+}
+
+
+@media (max-width: 900px){
+  .sobremi-container {
+   display: flex;
+   flex-direction: column;
+    margin-top: 3rem;
+    padding: 2rem;
+  }
+  .sobremi-description-container{
+    text-align: center;
+  }
+  .profile-image{
+    height: 15rem;
+  }
+  .sobremi-text{
+    font-size: 1rem;
+  }
+  .title{
+    font-size: 2.5rem;
+  }
+  .subtitle{
+    font-size: 1.5rem;
+  }
+  .project-section{
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    padding: 1rem;
+  }
+  .first-project-container{
+    margin-right: 3rem;
+  }
+  .img-project-container{
+    width: 18rem;
+    height: 15rem;
+  }
+  .form-container{
+    width: 90% ;
+  }
+  .send-button{
+    width: 40%;
+  }
 }
